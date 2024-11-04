@@ -1,6 +1,8 @@
-# Car Price Prediction Application
+# Car Dheko - Used Car Price Prediction Application
 
-This project is a **Streamlit-based web application** that predicts the price of used cars based on a comprehensive analysis of structured and unstructured car listing data scraped from CarDekho. By implementing a robust preprocessing pipeline and a fine-tuned Random Forest model, the application offers users accurate and data-driven car price estimates based on attributes such as **fuel type, body type, transmission, manufacturer, and more**.
+This project is a **Streamlit-based web application** that predicts the price of used cars based on a comprehensive analysis of structured and unstructured car listing data scraped from CarDekho. By implementing a robust preprocessing pipeline and a fine-tuned Random Forest model with **GridSearchCV**, the application offers users accurate(**R² score 0.9028**) and data-driven car price estimates based on attributes such as **city,fuel type, body type, transmission, manufacturer, and more**.
+
+[Watch Demo Video](https://www.youtube.com/watch?v=W-DZWO-53uU)
 
 ## Problem Statement
 
@@ -10,7 +12,7 @@ The "Car Price Prediction Application" addresses the challenge of providing reli
 
 - **Data Cleaning and Feature Engineering**: Handles unstructured data, extracts meaningful features, and ensures consistency across the dataset.
 - **Optimal Model Selection**: Tested multiple models, with **Random Forest** achieving the best performance:
-  - **R² Score**: 0.905, explaining over 90% of variance in car prices.
+  - **R² Score**: 0.895, explaining over 90% of variance in car prices.
   - **Mean Absolute Error (MAE)**: 1.23
   - **Mean Squared Error (MSE)**: 13.12
 - **Hyperparameter Optimization**: Leveraged **Grid Search** to improve the model's R² score to 0.9028, indicating the model explains approximately 90.28% of price variance.
@@ -24,7 +26,7 @@ The "Car Price Prediction Application" addresses the challenge of providing reli
 ## Features
 
 ### 1. **Data Preprocessing**
-   - **Unstructured Data Processing**: Transforms data scraped from CarDekho into a structured format.
+   - **Unstructured Data Processing**: Transfored data scraped from CarDekho into a structured format.
    - **Feature Engineering**: Extracts critical attributes from complex, nested data fields.
    - **Scaling and Encoding**: Utilizes **MinMax Scaler** for numerical attributes and one-hot encoding for categorical attributes.
    - The preprocessing pipeline is implemented in the `Data_preprocessing.ipynb` notebook.
@@ -40,7 +42,9 @@ The "Car Price Prediction Application" addresses the challenge of providing reli
    - **Interactive Web Application**: Built with **Streamlit** for easy user interaction.
    - **User Inputs**: Accepts car features such as fuel type, body type, transmission, manufacturer, and other specifications.
    - **Prediction Display**: Outputs the predicted car price based on the input parameters.
-
+- ![Home Screen](Images/Home_Screen.png)
+- ![Filters Screen](Images/Filters_Screen.png)
+- ![Results Screen](Images/Results_Screen.png)
 ## Application Workflow
 
 1. **Data Loading and Cleaning**: Reads raw data, cleans, and encodes it for analysis.
@@ -85,16 +89,23 @@ The optimized Random Forest model achieved a high R² score of **0.9028**, meani
 ---
 
 ## How to Run
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd car-price-prediction
 
-### Prerequisites
+  2. **Ensure you have the following libraries installed**:  streamlit pandas scikit-learn
 
-Ensure you have the following libraries installed:
+ 3. **Run the Streamlit Application**:
+   - To run the application, use the following command:
+     ```bash
+     streamlit run app.py
+     ```
+  ## Contributing:
 
-pip install streamlit pandas scikit-learn
+- Contributions are welcome! Feel free to submit **pull requests** or open **issues** for any bugs, feature requests, or improvements.
+- Let me know if you need any further changes or assistance!  
 
-Clone the repository:
-git clone <repository_url>
-cd car-price-prediction
 
-Run the Streamlit Application:
-streamlit run app.py
+
+

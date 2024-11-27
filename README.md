@@ -1,6 +1,6 @@
 # Car Dheko - Used Car Price Prediction Application
 
-This project is a **Streamlit-based web application** that predicts the price of used cars based on a comprehensive analysis of structured and unstructured car listing data scraped from CarDekho. By implementing a robust preprocessing pipeline and a fine-tuned Random Forest model with **GridSearchCV**, the application offers users accurate(**R² score 0.9028**) and data-driven car price estimates based on attributes such as **city,fuel type, body type, transmission, manufacturer, and more**.
+This project is a **Streamlit-based web application** that predicts the price of used cars based on a comprehensive analysis of structured and unstructured car listing data scraped from CarDekho. By implementing a robust preprocessing pipeline and a fine-tuned Random Forest model with **GridSearchCV**, the application offers users accurate(**R² score 0.9028**) and data-driven car price estimates based on attributes such as **city,fuel type, body type, transmission, manufacturer, and more**. 
 
 [Watch Demo Video](https://www.youtube.com/watch?v=W-DZWO-53uU)
 
